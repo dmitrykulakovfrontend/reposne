@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mama HR - Объединяем таланты студентов</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="particles" id="particles"></div>
+        <div class="morphing-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="gradient-overlay"></div>
+    </div>
+
+    <div class="page-background">
+        <div class="page-wrapper">
+            <header class="site-header">
+                <div class="header-inner">
+                    <img src="assets/logo.png" alt="Mama HR" class="logo" width="140" height="32" />
+                    <nav class="header-nav">
+                        <a href="#waitlist">Список ожидания</a>
+                        <a href="#press">Для прессы</a>
+                        <a href="https://t.me/mamahr" target="_blank">Telegram</a>
+                    </nav>
+                </div>
+            </header>
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="decor-blob blob-a"></div>
+                <div class="decor-blob blob-b"></div>
+                <div class="hero-content">
+                    <div class="hero-text-container">
+                        <h1 class="hero-title">
+                            <span class="title-line">Mama HR</span>
+                            <span class="title-line highlight">платформа доверия</span>
+                            <span class="title-line">для студентов и компаний</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            Здесь студенты находят стажировки и работу. Поддержка родителей (монеты доверия) — опционально и усиливает шанс.
+                        </p>
+
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-icon">👨‍👩‍👧</div>
+                            <div class="stat-number" data-target="36">0</div>
+                            <div class="stat-label">% падения вакансий</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">🎓</div>
+                            <div class="stat-number" data-target="996">0</div>
+                            <div class="stat-label">часов работы в неделю</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">🏢</div>
+                            <div class="stat-number" data-target="500">0</div>
+                            <div class="stat-label">студентов в системе</div>
+                        </div>
+                    </div>
+
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="scrollToWaitlist()">
+                            <span class="btn-text">Присоединиться к списку ожидания</span>
+                        </button>
+                        <button class="btn btn-secondary" onclick="scrollToAbout()">
+                            <span class="btn-text">Узнать больше</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Problem Section -->
+            <section class="problem-section">
+                <div class="problem-container">
+                    <h2 class="section-title">Кризис рынка труда: что происходит?</h2>
+
+                    <div class="problem-grid">
+                        <div class="problem-card">
+                            <div class="problem-icon">📊</div>
+                            <h3>Статистика Indeed (июль 2025)</h3>
+                            <p class="problem-stat"><strong>-36%</strong></p>
+                            <p>сокращение вакансий для junior-специалистов с 2020 по 2025 год</p>
+                        </div>
+
+                        <div class="problem-card">
+                            <div class="problem-icon">🏢</div>
+                            <h3>Кремниевая долина в панике</h3>
+                            <p>ИИ-стартапы переходят на китайский график работы "996" (9:00-21:00, 6 дней в неделю)</p>
+                            <p class="problem-note">Родители уже закупают матрасы для ночёвок в офисах</p>
+                        </div>
+
+                        <div class="problem-card">
+                            <div class="problem-icon">🎓</div>
+                            <h3>Проблема студентов</h3>
+                            <ul>
+                                <li>Конкуренция за стажировки жесточайшая</li>
+                                <li>Без опыта работы устроиться почти невозможно</li>
+                                <li>Технологии развиваются быстрее, чем образование</li>
+                                <li>Недостаток менторства и рекомендаций</li>
+                            </ul>
+                        </div>
+
+                        <div class="problem-card">
+                            <div class="problem-icon">💼</div>
+                            <h3>Проблема компаний</h3>
+                            <ul>
+                                <li>Сложно найти квалифицированных junior-специалистов</li>
+                                <li>Высокие риски при найме без опыта</li>
+                                <li>Дорого обучать новичков с нуля</li>
+                                <li>Недостаток проверенных кандидатов</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="crisis-timeline">
+                        <h3>Хронология кризиса</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-date">2020</div>
+                                <div class="timeline-content">
+                                    <h4>Пик пандемии</h4>
+                                    <p>Массовые увольнения и заморозка найма junior-специалистов</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">2023</div>
+                                <div class="timeline-content">
+                                    <h4>Бум ИИ-технологий</h4>
+                                    <p>Стартапы ускоряют развитие, требуют больше специалистов</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">2025</div>
+                                <div class="timeline-content">
+                                    <h4>Кризис рынка</h4>
+                                    <p>36% падение вакансий, переход на экстремальные графики работы</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Solution Section -->
+            <section class="solution-section">
+                <div class="solution-container">
+                    <h2 class="section-title">Как Mama HR решает проблему?</h2>
+
+                    <div class="solution-overview">
+                        <div class="solution-main">
+                            <h3>Экономика доверия</h3>
+                            <p>Mama HR помогает студентам найти стажировки и первую работу через рекомендации и прозрачный подбор. Монеты доверия от родителей — это дополнительная опция, которая повышает видимость кандидата, но не обязательное условие.</p>
+                        </div>
+                        <div class="solution-visual">
+                            <div class="trust-flow">
+                                <div class="flow-step">
+                                    <div class="flow-icon">👨‍👩‍👧</div>
+                                    <div class="flow-text">Родитель при желании покупает монеты</div>
+                                </div>
+                                <div class="flow-arrow">→</div>
+                                <div class="flow-step">
+                                    <div class="flow-icon">🎓</div>
+                                    <div class="flow-text">Студент получает преимущество</div>
+                                </div>
+                                <div class="flow-arrow">→</div>
+                                <div class="flow-step">
+                                    <div class="flow-icon">🏢</div>
+                                    <div class="flow-text">Компания берет без риска</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="benefits-grid">
+                        <div class="benefit-card">
+                            <div class="benefit-icon">🎯</div>
+                            <h4>Для студентов</h4>
+                            <ul>
+                                <li>Стажировки и первая работа для студентов</li>
+                                <li>Рекомендации от проверенных источников</li>
+                                <li>Менторство и поддержка</li>
+                                <li>Возможность перейти на постоянную позицию</li>
+                            </ul>
+                        </div>
+
+                        <div class="benefit-card">
+                            <div class="benefit-icon">❤️</div>
+                            <h4>Для родителей</h4>
+                            <ul>
+                                <li>Контроль за карьерой ребенка</li>
+                                <li>Инвестиции в будущее</li>
+                                <li>Прозрачная система рейтинга</li>
+                                <li>Гарантия качества кандидатов</li>
+                            </ul>
+                        </div>
+
+                        <div class="benefit-card">
+                            <div class="benefit-icon">🏢</div>
+                            <h4>Для компаний</h4>
+                            <ul>
+                                <li>Безрисковый найм — стажировка оплачена родителями</li>
+                                <li>Проверенные кандидаты с рекомендациями</li>
+                                <li>Экономия на обучении и найме</li>
+                                <li>Возможность перевести лучших на постоянную работу</li>
+                            </ul>
+                        </div>
+
+                        <div class="benefit-card">
+                            <div class="benefit-icon">📈</div>
+                            <h4>Для рынка</h4>
+                            <ul>
+                                <li>Снижение безработицы среди молодежи</li>
+                                <li>Повышение качества образования</li>
+                                <li>Развитие технологической отрасли</li>
+                                <li>Создание экосистемы доверия</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section class="about">
+                <h2>Как это работает?</h2>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-icon">👩‍👧</div>
+                        <h3>РОДИТЕЛЬ</h3>
+                        <p>Рекомендует своего ребенка; монеты доверия — по желанию</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon">🎓</div>
+                        <h3>СТУДЕНТ</h3>
+                        <p>Получает оплаченную стажировку, опыт работы и возможность перейти на постоянную позицию</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon">🏢</div>
+                        <h3>КОМПАНИЯ</h3>
+                        <p>Берет на стажировку без риска — стажировка оплачена родителями, получает проверенных кандидатов с рекомендациями</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon">🚀</div>
+                        <h3>СТАРТ</h3>
+                        <p>Студент получает опыт и может перейти на постоянную работу с гарантией и возможностью роста</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Full-width dark section -->
+            <section class="full-width-section">
+                <div class="dark-content">
+                    <h2>Объединяем таланты</h2>
+                    <p>Создаем экосистему доверия между родителями, студентами и компаниями</p>
+
+                    <!-- Talent carousel -->
+                    <div class="talent-carousel">
+                        <div class="talent-card">
+                            <div class="avatar"></div>
+                            <div class="info">
+                                <div class="name">Мария С.</div>
+                                <div class="role">UX Designer</div>
+                            </div>
+                        </div>
+                        <div class="talent-card">
+                            <div class="avatar"></div>
+                            <div class="info">
+                                <div class="name">Алексей П.</div>
+                                <div class="role">Backend Developer</div>
+                            </div>
+                        </div>
+                        <div class="talent-card">
+                            <div class="avatar"></div>
+                            <div class="info">
+                                <div class="name">Екатерина М.</div>
+                                <div class="role">Data Analyst</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Waitlist Section -->
+            <section id="waitlist" class="waitlist">
+                <h2>Присоединиться к списку ожидания</h2>
+                <p class="waitlist-subtitle">Станьте первыми, кто узнает о запуске платформы</p>
+
+                <form id="waitlistForm" class="waitlist-form">
+                    <!-- Role Selection -->
+                    <div class="role-selection">
+                        <label class="btn-role" data-role="student">
+                            <input type="radio" id="role-student" name="role" value="student" style="display:none;">
+                            <span>Я СТУДЕНТ</span>
+                        </label>
+
+                        <label class="btn-role" data-role="parent">
+                            <input type="radio" id="role-parent" name="role" value="parent" style="display:none;">
+                            <span>Я РОДИТЕЛЬ</span>
+                        </label>
+
+                        <label class="btn-role" data-role="company">
+                            <input type="radio" id="role-company" name="role" value="company" style="display:none;">
+                            <span>Я КОМПАНИЯ</span>
+                        </label>
+                    </div>
+
+                    <!-- Form Fields -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" class="form-input" placeholder=" " required>
+                            <label for="name" class="form-label">Ваше имя *</label>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" class="form-input" placeholder=" " required>
+                            <label for="email" class="form-label">Email *</label>
+                        </div>
+                    </div>
+
+                    <!-- Description Field -->
+                    <div class="form-group full-width-group">
+                        <textarea id="description" name="description" class="form-textarea" placeholder=" " rows="4"></textarea>
+                        <label for="description" class="form-label">Опишите ваши ожидания (необязательно)</label>
+                    </div>
+
+                    <!-- Honeypot (anti-bot hidden field) -->
+                    <input type="text" id="website" name="website" class="honeypot" autocomplete="off" tabindex="-1" aria-hidden="true">
+
+                    <!-- Bot Protection -->
+                    <div class="bot-check">
+                        <label for="human" class="human-check">
+                            <input type="checkbox" id="human" name="human" required>
+                            <span class="checkmark"></span>
+                            <span>Я не робот *</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary full-width">
+                        <span class="btn-text">Присоединиться</span>
+                        <span class="btn-loader" style="display:none;">⏳</span>
+                    </button>
+                    <p class="form-note">* Обязательные поля</p>
+                </form>
+
+                <div id="successMessage" class="success-message" style="display:none;">
+                    <div class="success-icon">✅</div>
+                    <h3>Спасибо за регистрацию!</h3>
+                    <p>Мы свяжемся с вами, как только запустим платформу.</p>
+                    <div class="position-info">Ваша позиция в списке: <span id="positionNumber">#42</span></div>
+                </div>
+            </section>
+        </div>
+
+            <!-- Press Section -->
+            <section id="press" class="press-section">
+                <div class="press-container">
+                    <h2 class="section-title">Для прессы и СМИ</h2>
+                    <p class="press-intro">Mama HR — инновационная платформа, решающая актуальную проблему трудоустройства молодых специалистов в эпоху ИИ-революции</p>
+
+                    <div class="press-content">
+                        <div class="press-news">
+                            <h3>📰 Почему это важно для СМИ?</h3>
+                            <ul class="press-points">
+                                <li><strong>Актуальная тема:</strong> Кризис рынка труда для junior-специалистов — горячая тема 2025 года</li>
+                                <li><strong>Социальная значимость:</strong> Решение проблемы безработицы среди молодежи</li>
+                                <li><strong>Экономический аспект:</strong> Новый подход к найму и профессиональному развитию</li>
+                                <li><strong>Статистика:</strong> Подтвержденные данные от Indeed и других источников</li>
+                                <li><strong>Инновация:</strong> Первая платформа, объединяющая родителей, студентов и компании</li>
+                            </ul>
+                        </div>
+
+                        <div class="press-contacts">
+                            <h3>📞 Контакты для прессы</h3>
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <strong>Официальные контакты</strong>
+                                    <p>Актуальные контакты будут опубликованы к запуску платформы.</p>
+                                    <p>Пока что — отправьте запрос через форму на этой странице.</p>
+                                </div>
+                                <div class="contact-item">
+                                    <strong>Материалы для подготовки</strong>
+                                    <p><a href="#press" class="material-link">Пресс-релиз, факты, логотипы</a> доступны выше в разделе «Материалы для прессы».</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="press-materials">
+                        <h3>📎 Материалы для прессы</h3>
+                        <div class="materials-grid">
+                            <div class="material-item">
+                                <div class="material-icon">📄</div>
+                                <h4>Пресс-релиз</h4>
+                                <p>Официальный пресс-релиз о запуске платформы</p>
+                                <a href="press_release_mamahr.docx" download class="material-link">Скачать DOCX</a>
+                            </div>
+                            <div class="material-item">
+                                <div class="material-icon">📋</div>
+                                <h4>О проекте</h4>
+                                <p>Краткое описание платформы Mama HR</p>
+                                <a href="about_mamahr.txt" download class="material-link">Скачать TXT</a>
+                            </div>
+                            <div class="material-item">
+                                <div class="material-icon">📊</div>
+                                <h4>Ключевые факты</h4>
+                                <p>Статистика и факты о рынке труда</p>
+                                <a href="key_facts_mamahr.txt" download class="material-link">Скачать TXT</a>
+                            </div>
+                            <div class="material-item">
+                                <div class="material-icon">🖼️</div>
+                                <h4>Логотипы и бренд</h4>
+                                <p>Логотип Mama HR в различных форматах</p>
+                                <a href="assets/logo.png" download class="material-link">Скачать SVG</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="press-facts">
+                        <h3>🔍 Ключевые факты для журналистов</h3>
+                        <div class="facts-grid">
+                            <div class="fact-card">
+                                <div class="fact-number">-36%</div>
+                                <div class="fact-text">Сокращение вакансий для junior-разработчиков с 2020 по 2025 (Indeed, июль 2025)</div>
+                            </div>
+                            <div class="fact-card">
+                                <div class="fact-number">996</div>
+                                <div class="fact-text">Часов работы в неделю — новый стандарт в ИИ-стартапах ("китайский график")</div>
+                            </div>
+                            <div class="fact-card">
+                                <div class="fact-number">2025</div>
+                                <div class="fact-text">Год запуска платформы Mama HR в России</div>
+                            </div>
+                            <div class="fact-card">
+                                <div class="fact-number">100+</div>
+                                <div class="fact-text">Кандидатов на одну стажировку — высокая конкуренция</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="press-sources">
+                        <h3>📚 Источники данных</h3>
+                        <ul class="sources-list">
+                            <li><strong>Indeed Hiring Lab</strong> — статистика рынка труда (июль 2025)</li>
+                            <li><strong>Анализ рынка технологий</strong> — тренды в ИИ-индустрии</li>
+                            <li><strong>Исследования Mama HR</strong> — опросы среди студентов и компаний</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Mama HR</h3>
+                    <p>Объединяем таланты</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">О нас</a>
+                    <a href="#press">Для прессы</a>
+                    <a href="mailto:press@mamahr.ru">Контакты</a>
+                    <a href="https://t.me/mamahr" target="_blank">Telegram</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
