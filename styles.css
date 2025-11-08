@@ -146,16 +146,16 @@ body {
 .page-background {
     min-height: 100vh;
     background: #F4F8FF;
-    padding: 20px;
+    padding: 0;
     position: relative;
 }
 
 /* Main Card Wrapper */
 .page-wrapper {
-    max-width: 1200px;
+    /* max-width: 1200px; */
+    max-width: full;
     margin: 0 auto;
     background: #FFFFFF;
-    border-radius: 24px;
     box-shadow: 0 8px 32px rgba(124, 58, 237, 0.1);
     overflow: hidden;
 }
